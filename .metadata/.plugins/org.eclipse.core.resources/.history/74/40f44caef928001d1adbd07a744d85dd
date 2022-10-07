@@ -1,0 +1,43 @@
+package com.Departmentservice.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Departmentservice.Service.DepartmentService;
+import com.Departmentservice.Service.Departmentinterface;
+import com.Departmentservice.entity.Department;
+
+@RestController
+@RequestMapping("/Departments")
+public class DepartmentController {
+
+	@Autowired
+	Departmentinterface departmentinterface;
+	
+	@PostMapping("/savedepartment")
+	public Department savedepartment(@RequestBody Department department)
+	{
+		return departmentinterface.savedepartment(department);
+		
+	}
+	
+	@GetMapping("/")
+	public List<Department> getdepartment(){
+		return this.departmentinterface.getdepartment();
+	}
+	
+	@GetMapping("/{id}")
+	public Department getdDepatmentbyid(@PathVariable("id") Long departmentid) 
+	{
+		return this.departmentinterface.getdDepatmentbyid(departmentid);
+		
+	}
+}

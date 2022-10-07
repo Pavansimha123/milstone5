@@ -1,0 +1,5 @@
+package com.college.service.repo;
+
+public interface Collegerepo {
+
+}

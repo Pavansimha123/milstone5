@@ -1,0 +1,5 @@
+package com.employee.angularr.exception;
+
+public class ResourceNotFoundException {
+
+}

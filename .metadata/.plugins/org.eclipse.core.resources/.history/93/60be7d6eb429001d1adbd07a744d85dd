@@ -1,0 +1,9 @@
+package com.college.service.Service;
+
+import com.college.service.entity.College;
+
+public interface CollegeService {
+
+	College savecollege(College college);
+
+}

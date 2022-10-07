@@ -1,0 +1,13 @@
+package com.Student.college.service;
+
+import org.springframework.stereotype.Service;
+
+import com.Student.college.entity.Student;
+
+@Service
+public interface StudentService
+{
+
+	Student savestudent(Student student);
+
+}

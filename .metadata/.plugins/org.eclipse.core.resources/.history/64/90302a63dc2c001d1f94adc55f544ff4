@@ -1,0 +1,84 @@
+package com.Student.college.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Student
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long studentid;
+	private String Studentname;
+	private Long age;
+	private String gender;
+	private String stream;
+	private long collegeid;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Student(String studentname, Long age, String gender, String stream, long collegeid) {
+		super();
+		Studentname = studentname;
+		this.age = age;
+		this.gender = gender;
+		this.stream = stream;
+		this.collegeid = collegeid;
+	}
+	public Student(Long studentid, String studentname, Long age, String gender, String stream, long collegeid) {
+		super();
+		this.studentid = studentid;
+		Studentname = studentname;
+		this.age = age;
+		this.gender = gender;
+		this.stream = stream;
+		this.collegeid = collegeid;
+	}
+	public Long getStudentid() {
+		return studentid;
+	}
+	public void setStudentid(Long studentid) {
+		this.studentid = studentid;
+	}
+	public String getStudentname() {
+		return Studentname;
+	}
+	public void setStudentname(String studentname) {
+		Studentname = studentname;
+	}
+	public Long getAge() {
+		return age;
+	}
+	public void setAge(Long age) {
+		this.age = age;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getStream() {
+		return stream;
+	}
+	public void setStream(String stream) {
+		this.stream = stream;
+	}
+	public Long getCollegeid() {
+		return collegeid;
+	}
+	public void setCollegeid(Long collegeid) {
+		this.collegeid = collegeid;
+	}
+	@Override
+	public String toString() {
+		return "Student [studentid=" + studentid + ", Studentname=" + Studentname + ", age=" + age + ", gender="
+				+ gender + ", stream=" + stream + ", collegeid=" + collegeid + "]";
+	}
+
+
+	
+}

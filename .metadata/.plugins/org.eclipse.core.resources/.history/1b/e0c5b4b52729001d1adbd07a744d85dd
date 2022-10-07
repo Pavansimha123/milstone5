@@ -1,0 +1,29 @@
+package junit.utilits;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MathcalcTest {
+
+	@Test
+	void test() {
+		
+		//fail("Not yet implemented");
+		//System.out.println("This Test Ran");
+		Mathcalc calc= new Mathcalc();
+		int expectedoutput= 1;
+		int actualoutput=calc.add(1, 1);
+		
+		assertEquals(expectedoutput, actualoutput);
+	}
+	
+	@Test
+	void computercircleradius()
+	{
+		Mathcalc calc= new Mathcalc();
+		assertEquals(314.159265, calc.computercircleradius(10));
+	}
+	
+
+}

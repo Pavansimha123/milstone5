@@ -1,0 +1,18 @@
+package com.Departmentservice.Service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.Departmentservice.entity.Department;
+
+@Service
+public interface Departmentinterface
+{
+
+	public Department savedepartment(Department department);
+
+	public List<Department> getdepartment();
+	
+  Department getdDepatmentbyid(Long id);
+}

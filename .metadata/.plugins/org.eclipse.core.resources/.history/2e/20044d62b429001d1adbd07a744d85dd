@@ -1,0 +1,20 @@
+package com.college.service.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.college.service.entity.College;
+import com.college.service.repo.Collegerepo;
+
+@component
+public class CollegeserviceImpl implements CollegeService {
+
+	@Autowired
+	Collegerepo collegerepo;
+	
+	@Override
+	public College savecollege(College college) {
+		// TODO Auto-generated method stub
+		return collegerepo.save(college);
+	}
+
+}

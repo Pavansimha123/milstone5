@@ -1,0 +1,44 @@
+package junit.utilits;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class MathcalcTest {
+
+	Mathcalc calc;
+	
+	@BeforeEach
+	public void init() 
+	{     
+          calc= new Mathcalc();
+	}
+	@Test
+	void testadd() {
+		
+		//fail("Not yet implemented");
+		//System.out.println("This Test Ran");
+		
+		int expectedoutput= 2;
+		int actualoutput=calc.add(1, 1);
+		
+		assertEquals(expectedoutput, actualoutput);
+	}
+	@Test
+	void testDivide()
+	{
+		//Mathcalc calc= new Mathcalc();
+		assertThrows(ArithmeticException.class, ()->calc.Divide(1, 0));
+	
+	}
+	
+	@Test
+	void testcomputercircleradius()
+	{
+		//Mathcalc calc= new Mathcalc();
+		assertEquals(314.1592653589793, calc.computercircleradius(10));
+	}
+	
+
+}

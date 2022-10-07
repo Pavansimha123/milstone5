@@ -1,0 +1,10 @@
+package com.college.service.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.college.service.entity.College;
+
+public interface Collegerepo extends JpaRepository<College, Long>
+{
+
+}

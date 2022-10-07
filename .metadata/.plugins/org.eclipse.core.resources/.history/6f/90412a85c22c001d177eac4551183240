@@ -1,0 +1,69 @@
+package com.Student.college.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Student
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long studentrollnum;
+	private String Studentname;
+	private Long age;
+	private String gender;
+	private Long collegeid;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Student(Long studentrollnum, String studentname, Long age, String gender, Long collegeid) {
+		super();
+		this.studentrollnum = studentrollnum;
+		Studentname = studentname;
+		this.age = age;
+		this.gender = gender;
+		this.collegeid = collegeid;
+	}
+	public Student(String studentname, Long age, String gender, Long collegeid) {
+		super();
+		Studentname = studentname;
+		this.age = age;
+		this.gender = gender;
+		this.collegeid = collegeid;
+	}
+	public Long getStudentrollnum() {
+		return studentrollnum;
+	}
+	public void setStudentrollnum(Long studentrollnum) {
+		this.studentrollnum = studentrollnum;
+	}
+	public String getStudentname() {
+		return Studentname;
+	}
+	public void setStudentname(String studentname) {
+		Studentname = studentname;
+	}
+	public Long getAge() {
+		return age;
+	}
+	public void setAge(Long age) {
+		this.age = age;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public Long getCollegeid() {
+		return collegeid;
+	}
+	public void setCollegeid(Long collegeid) {
+		this.collegeid = collegeid;
+	}
+	
+	
+}

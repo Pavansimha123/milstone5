@@ -1,0 +1,13 @@
+package com.college.service.Service;
+
+import com.college.service.entity.College;
+
+public class CollegeserviceImpl implements CollegeService {
+
+	@Override
+	public College savecollege(College college) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

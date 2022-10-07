@@ -1,0 +1,25 @@
+package com.Student.college;
+
+import java.util.List;
+
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.Student.college.Controller.Controller;
+import com.Student.college.entity.Student;
+import com.Student.college.service.StudentService;
+
+@SpringBootTest(classes= {ControllerTest.class})
+public class ControllerTest 
+{
+	@Mock
+	StudentService studentservice;
+	
+	@InjectMocks
+	Controller controller;
+	
+	List<Student> students;
+	 Student student;
+	
+}

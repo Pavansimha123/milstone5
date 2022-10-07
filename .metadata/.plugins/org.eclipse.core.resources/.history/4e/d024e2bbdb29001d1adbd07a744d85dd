@@ -1,0 +1,30 @@
+package com.college.service.repo;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.college.service.entity.College;
+
+@SpringBootTest
+class Collegerepotest {
+
+	@Autowired
+	private Collegerepo collegerepo;
+	
+	@Test
+	void iscollegeexistbyid() {
+		//fail("Not yet implemented");
+		College college = new College(1l,"oxford",23l);
+		collegerepo.save(college);
+		
+		Boolean actualresult =collegerepo.iscollegeexistbyid(1l);
+		
+		assertThat(actualresult).isTrue();
+		
+	}
+
+}

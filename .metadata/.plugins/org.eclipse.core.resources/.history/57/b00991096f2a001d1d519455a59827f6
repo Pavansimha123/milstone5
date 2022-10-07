@@ -1,0 +1,10 @@
+package com.Student.college.VO;
+
+public class College {
+
+	public College() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

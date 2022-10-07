@@ -1,0 +1,52 @@
+package com.Student.college.VO;
+
+public class College {
+
+	private Long collegeid;
+	private String collegename;
+	private Long totalnumofstudents;
+	
+	public College() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public College(Long collegeid, String collegename, Long totalnumofstudents) {
+		super();
+		this.collegeid = collegeid;
+		this.collegename = collegename;
+		this.totalnumofstudents = totalnumofstudents;
+	}
+
+	public College(String collegename, Long totalnumofstudents) {
+		super();
+		this.collegename = collegename;
+		this.totalnumofstudents = totalnumofstudents;
+	}
+
+	public Long getCollegeid() {
+		return collegeid;
+	}
+
+	public void setCollegeid(Long collegeid) {
+		this.collegeid = collegeid;
+	}
+
+	public String getCollegename() {
+		return collegename;
+	}
+
+	public void setCollegename(String collegename) {
+		this.collegename = collegename;
+	}
+
+	public Long getTotalnumofstudents() {
+		return totalnumofstudents;
+	}
+
+	public void setTotalnumofstudents(Long totalnumofstudents) {
+		this.totalnumofstudents = totalnumofstudents;
+	}
+	
+
+}

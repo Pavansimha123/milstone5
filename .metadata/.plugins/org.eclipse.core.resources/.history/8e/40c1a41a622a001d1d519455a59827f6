@@ -1,0 +1,20 @@
+package com.Student.college.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.Student.college.entity.Student;
+import com.Student.college.repository.Studentrepo;
+
+public class Studentserviceimpl implements StudentService {
+
+	@Autowired
+	private Studentrepo studentrepo;
+	
+	
+	@Override
+	public Student savestudent(Student student) {
+		// TODO Auto-generated method stub
+		return studentrepo.save(student);
+	}
+
+}

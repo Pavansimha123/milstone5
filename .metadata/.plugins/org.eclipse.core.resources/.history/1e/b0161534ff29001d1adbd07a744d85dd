@@ -1,0 +1,36 @@
+package com.college.service.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+import com.college.service.entity.College;
+import com.college.service.repo.Collegerepo;
+
+@ComponentScan
+public class CollegeserviceImpl implements CollegeService {
+
+	@Autowired
+  private  Collegerepo collegerepo;
+	
+	@Override
+	public College savecollege(College college) {
+		// TODO Auto-generated method stub
+		return collegerepo.save(college);
+	}
+
+	@Override
+	public List<College> getallcollege() {
+		// TODO Auto-generated method stub
+		return this.collegerepo.findAll();
+	}
+
+	@Override
+	public College getcollegebyid(Long id) {
+		// TODO Auto-generated method stub
+		return collegerepo.getcollegebyid(id);
+	}
+
+}

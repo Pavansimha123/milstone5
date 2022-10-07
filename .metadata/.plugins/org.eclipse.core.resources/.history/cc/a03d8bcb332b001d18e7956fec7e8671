@@ -1,0 +1,9 @@
+package com.employee.angularr.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.employee.angularr.model.Employee;
+
+public interface employeerepo extends JpaRepository<Employee, Long> {
+
+}

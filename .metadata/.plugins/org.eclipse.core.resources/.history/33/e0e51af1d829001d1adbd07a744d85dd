@@ -1,0 +1,14 @@
+package com.college.service.repo;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Collegerepotest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

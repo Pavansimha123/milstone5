@@ -1,0 +1,6 @@
+package com.Student.college.service;
+
+public interface StudentService
+{
+
+}

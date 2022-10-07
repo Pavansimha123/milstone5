@@ -1,0 +1,12 @@
+package com.college.service.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.college.service.entity.College;
+
+@Repository
+public interface Collegerepo extends JpaRepository<College, Long>
+{
+    Boolean iscollegeexistbyid(Long id);
+}

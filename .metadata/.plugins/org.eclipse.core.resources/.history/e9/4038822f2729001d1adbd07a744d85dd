@@ -1,0 +1,10 @@
+package junit.utilits;
+
+public class Mathcalc {
+	
+	public int add(int a, int b) 
+	{
+		return a+b;
+	}
+
+}
